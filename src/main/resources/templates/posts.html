@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+
+	<head>
+	
+		<meta charset="UTF-8">
+		<title>MySafetyBlogbr</title>
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="css/styls.css">
+		<link rel="stylesheet" type="text/css" href="css/posts.css">
+	</head>
+	
+	<body>
+	
+		<header>
+		
+			<!-- Cabeçario -->
+			<nav class="navbar">
+			    <a class="navbar-title" href="/posts">MySafetyBlogbr</a>
+			    <a class="btn-blue3" href="/adminposts" role="button">Admin</a>
+			</nav>
+			
+		</header>
+		
+		<section>
+
+			<nav class="nav-text">
+		        <ol class="ol-list">
+		            <li class="li-list" aria-current="page">
+		               	<button  class="btn-grey11" type="button">Posts</button>
+		            </li>
+		        </ol>
+        	</nav>
+        		
+				<div class="cont">
+		    		
+		    		<div class="card" th:each="post : ${posts}">
+						<p class="card-subtitle" >
+					    	<span th:text="${post.autor}"></span>
+					        <span th:text="${post.data}"></span>  
+					    </p>
+						<h4 class="card-title"><a th:href="${(#mvc.url('SC#getPostDataile').arg(0, post.id)).build()}"><span th:text="${post.titulo}" ></span></a></h4>
+					    <p class="card-text"> <span th:utext="${#strings.abbreviate(post.texto,400)}"></span></p>
+					    <!--<a th:href="${(#mvc.url('BC#getPostDetails').arg(0, post.id)).build()}" class="card-link">Acessar</a>-->
+					</div>
+					
+				</div>
+		
+		</section>
+		
+		<footer>
+			
+			<p>@By JS - 2022</p>
+			
+		</footer>
+		
+	</body>
+	
+</html>

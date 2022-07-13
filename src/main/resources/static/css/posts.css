@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+section{
+	width: 70%;
+	margin: auto;
+}
+
+
+
+.cont{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.card{
+	width: 40%;
+	margin: 10px 0px 20px;
+	padding: 10px;
+	border: solid 1px;
+	border-radius: 3%;
+	border-color: #E8E8E8;
+	box-shadow: 0 0 0.1em black;
+}
+
+.card-subtitle span{
+	margin: 0px 10px 0px 0px;
+	font-style: italic;
+	color: #828282;
+}
+
+.card-title{
+	text-align: center;
+}
+
+.card-title span{
+	color: #000000;
+	font-size: 20px;
+}
+
+.card-title span:hover{
+	color: #FF0000;
+}
