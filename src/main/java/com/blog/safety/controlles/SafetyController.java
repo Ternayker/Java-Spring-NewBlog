@@ -46,11 +46,12 @@ public class SafetyController {
 		
 		//Funções do ADMIN
 		
-		@RequestMapping(value = "/adminposts", method = RequestMethod.GET)
-		public ModelAndView getAdminPost() {
-			ModelAndView mv = new ModelAndView("adminposts");
+		@RequestMapping(value = "/admin", method = RequestMethod.GET)
+		public ModelAndView getAdmin() {
+			ModelAndView mv = new ModelAndView("admin");
 			List<Posts> posts = safetyService.fidAll();
-			mv.addObject("adminposts",posts);
+			Collections.reverse(posts);
+			mv.addObject("admin",posts);
 			return mv;
 		}
 		

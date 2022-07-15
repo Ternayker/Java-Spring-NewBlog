@@ -17,7 +17,7 @@
 			<!-- Cabeçario -->
 			<nav class="navbar">
 			    <a class="navbar-titulo" href="/posts">MySafetyBlogbr</a>
-			    <a class="btn-purple4" href="/admin" role="button">Admin</a>
+			    <a class="btn-purple4" href="/newpost" role="button">Novo Post</a>
 			</nav>
 			
 		</header>
@@ -27,14 +27,20 @@
 			<nav class="nav-text">
 		        <ol class="ol-list">
 		            <li class="li-list" aria-current="page">
-		               	<button  class="btn-grey11" type="button">Posts</button>
+		               	<button class="btn-grey11" type="button">Posts</button>
 		            </li>
 		        </ol>
         	</nav>
         		
 				<div class="cont">
 		    		
-		    		<div class="card" th:each="post : ${posts}">
+		    		<div class="card" th:each="post : ${admin}">
+		    		
+		    		<!-- Botões de Deleta e Editar um Post -->
+					    <ol>
+							<li><a class="btn-purple4"  style="font-size: 12px;" role="button" th:href="@{editapost/{id}(id=${post.id})}">Edit</a></li>
+							<li><a class="btn-red3"  style="font-size: 12px;" role="button" th:href="@{deletpost/{id}(id=${post.id})}">Delet</a></li>
+					    </ol>
 						<p class="card-subtitle" >
 					    	<span th:text="${post.autor}"></span>
 					        <span th:text="${post.data}"></span>  

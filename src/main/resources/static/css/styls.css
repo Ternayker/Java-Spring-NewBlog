@@ -10,20 +10,41 @@ a{
 	text-decoration: none;
 }
 
-.btn-blue3{
+
+
+.btn-purple4{
+	text-decoration: none;
 	padding: 5px 10px 5px 10px;
 	border: solid 1.5px;
 	border-radius: 10%;
-	color: #0000CD;
+	color: #551A8B;
 	background-color: transparent;
 	font-family: Arial;
 }
 
-.btn-blue3:hover{
+.btn-purple4:hover{
 	transition: background-color .3s;
 	color: #E8E8E8;
-	border-color: #0000CD;
-	background-color: #0000CD;
+	border-color: #551A8B;
+	background-color: #551A8B;
+	
+}
+
+.btn-red3{
+	text-decoration: none;
+	padding: 5px 10px 5px 10px;
+	border: solid 1.5px;
+	border-radius: 10%;
+	color: #CD0000;
+	background-color: transparent;
+	font-family: sans-serif;
+}
+
+.btn-red3:hover{
+	transition: background-color .3s;
+	color: #E8E8E8;
+	border-color: #CD0000;
+	background-color: #CD0000;
 	
 }
 
@@ -47,6 +68,7 @@ a{
 ol{
 	list-style: none;
 	display: flex;
+	margin-left: -35px;
 }
 
 li{
@@ -65,23 +87,17 @@ li{
 	background: #E8E8E8;
 }
 
-.navbar-title{
+.navbar-titulo{
+	text-decoration: none;
 	margin: 15px 10px;
 	font-size: 23px;
 	font-family: FreeMono, monospace;
 	color: #1C1C1C;
 }
 
-.navbar .btn-blue3{
+.navbar .btn-purple4{
 	font-size: 18px;
 	margin: 15px 10px 10px;
-}
-
-/*Botões de redirecionamentos*/
-
-li .btn-grey11{
-	margin-left: -35px;
-	font-size: 18px;
 }
 
 /*Rodape*/

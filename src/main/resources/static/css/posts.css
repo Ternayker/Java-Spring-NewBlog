@@ -39,5 +39,6 @@ section{
 }
 
 .card-title span:hover{
-	color: #FF0000;
+	text-decoration: underline;
+	color: inherit;
 }
