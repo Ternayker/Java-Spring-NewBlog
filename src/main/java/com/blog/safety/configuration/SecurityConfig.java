@@ -13,14 +13,13 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @Configuration
 @EnableWebSecurity
-public class SecurityConfig {
+	public class SecurityConfig {
+		private static final String[] AUTH_LIST = {
+		        "/",
+		        "/posts",
+		        "/posts/{id}"
+		    };
 	
-	private static final String[] AUTH_LIST = {
-	        "/",
-	        "/posts",
-	        "/posts/{id}"
-	    };
-
 	 @Bean
 	 public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		 http.csrf().disable().authorizeRequests()
@@ -42,7 +41,7 @@ public class SecurityConfig {
 	
 	@Bean
 	public WebSecurityCustomizer webSecurityCustomizer() {
-	    return (web) -> web.ignoring().antMatchers("/bootstrap/**");
+	    return (web) -> web.ignoring().antMatchers("/css/**");
 	}
 }
 
