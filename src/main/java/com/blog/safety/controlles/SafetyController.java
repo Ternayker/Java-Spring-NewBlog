@@ -18,7 +18,6 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.blog.safety.model.Posts;
 import com.blog.safety.service.SafetyService;
 
-
 @Controller
 public class SafetyController {
 
