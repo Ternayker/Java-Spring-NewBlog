@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>MySafetyBlogbr</title>
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="../css/styls.css">
+		<link rel="stylesheet" type="text/css" href="../css/details.css">
+	</head>
+	
+	<body>
+	
+		<header>
+		
+			<!-- Cabeçario -->
+			<nav class="cabecario">
+			    <a class="titulo" href="/posts">MySafetyBlogbr</a>
+			</nav>
+			
+		</header>
+		
+		<main>
+		
+			<div class="container">
+			
+				<!-- link para vltar para a pagina anterior -->
+				<nav class="nav-text">
+		        <ol class="ol-list">
+		            <li class="li-list" aria-current="page">
+		               	<a href="/posts"><button  class="btn-purple4" type="button">Posts</button></a>
+		            </li>
+		            <li class="li-list" aria-current="page">
+		               	<button  class="btn-grey11" type="button">Post</button>
+		            </li>
+		        </ol>
+        		</nav>
+			
+				<article>
+		            <h1 class="titulo-card"><span th:text="${post.titulo}"></span></h1>
+		           
+		            <p class="card-subtitle">
+		               <!-- <i class="bi bi-person-fill"></i> -->
+		                <span th:text="${post.autor}"></span>
+		                <br>
+		               <!-- <i class="bi bi-calendar3">date_range</i> -->
+		                <span th:text="${post.data}"></span>
+		            </p>
+		            
+		            <section>
+		                <p class="texto-card"><span th:utext="${post.texto}"></span></p>
+		            </section>
+            
+       		 	</article>
+				
+			</div>
+		
+		</main>
+		
+	</body>
+	
+</html>

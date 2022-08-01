@@ -29,8 +29,8 @@
 		<header>
 		
 			<!-- Cabeçario -->
-			<nav class="navbar">
-			    <a class="navbar-titulo" href="/posts">MySafetyBlogbr</a>
+			<nav class="cabecario">
+			    <a class="titulo" href="/posts">MySafetyBlogbr</a>
 			    <a class="btn-purple4" href="/admin" role="button">Admin</a>
 			</nav>
 			
@@ -40,7 +40,7 @@
 			
 				<!-- link para vltar para a pagina anterior -->
 				<nav class="nav-text">
-		        	<ol class="ol-list">
+		        	<ol>
 		            <li >
 		            	<a href="/admin" type="button" class="btn-purple4">Posts</a>
 		            </li>
@@ -54,12 +54,12 @@
 					<th:block th:include="msgValidacao"></th:block>
 					<form method="post">
 
-		                <input type="text" class="control" style="margin-bottom: 10px" name="titulo" placeholder="Título *">
-		                <input type="text" class="control" style="margin-bottom: 10px"  name="autor" placeholder="Autor *">
-		                <textarea id="summernote" type="text" class="control" name="texto" placeholder="Texto *"></textarea>
+		                <input type="text" class="controle"  name="titulo" placeholder="Título *">
+		                <input type="text" class="controle"   name="autor" placeholder="Autor *">
+		                <textarea id="summernote" type="text" class="controle" name="texto" placeholder="Texto *"></textarea>
 		                <small class="text-muted">(*) Campos obrigatórios</small>
-		                <button type="submit" class="btn-purple4" style="margin-top: 10px;">Publicar</button>
-		                <a href="/newpost" class="btn-red3" role="button" style="margin-top: 10px;">Cancelar</a>
+		                <button type="submit" class="btn-purple4">Publicar</button>
+		                <a href="/newpost" class="btn-red3" role="button">Cancelar</a>
 		            
 		            </form>
 

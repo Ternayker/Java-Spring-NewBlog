@@ -15,8 +15,8 @@
 		<header>
 		
 			<!-- Cabeçario -->
-			<nav class="navbar">
-			    <a class="navbar-titulo" href="/posts">MySafetyBlogbr</a>
+			<nav class="cabecario">
+			    <a class="titulo" href="/posts">MySafetyBlogbr</a>
 			    <a class="btn-purple4" href="/admin" role="button">Admin</a>
 			</nav>
 			
@@ -35,12 +35,13 @@
 				<div class="cont">
 		    		
 		    		<div class="card" th:each="post : ${posts}">
+		    		<a th:href="${(#mvc.url('SC#getPostDataile').arg(0, post.id)).build()}">
 						<p class="card-subtitle" >
 					    	<span th:text="${post.autor}"></span>
 					        <span th:text="${post.data}"></span>  
 					    </p>
-						<h4 class="card-title"><a th:href="${(#mvc.url('SC#getPostDataile').arg(0, post.id)).build()}"><span th:text="${post.titulo}" ></span></a></h4>
-					    <p class="card-text"> <span th:utext="${#strings.abbreviate(post.texto,400)}"></span></p>
+						<p class="card-title"><span th:text="${post.titulo}" ></span></p>
+					    <p class="card-text"> <span th:utext="${#strings.abbreviate(post.texto,400)}"></span></p></a>
 					    <!--<a th:href="${(#mvc.url('BC#getPostDetails').arg(0, post.id)).build()}" class="card-link">Acessar</a>-->
 					</div>
 					

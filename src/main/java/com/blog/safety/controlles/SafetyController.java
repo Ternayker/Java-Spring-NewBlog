@@ -68,7 +68,7 @@ public class SafetyController {
 			}
 			post.setData(LocalDate.now());
 			safetyService.save(post);
-			return "redirect:/adminposts";
+			return "redirect:/admin";
 		}
 		
 		@RequestMapping(value = "/editapost/{id}", method = RequestMethod.GET)
@@ -89,7 +89,7 @@ public class SafetyController {
 			}
 			post.setData(LocalDate.now());
 			safetyService.save(post);
-			mv.setViewName("redirect:/adminposts");
+			mv.setViewName("redirect:/admin");
 			return mv;
 		}
 		

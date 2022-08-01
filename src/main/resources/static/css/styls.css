@@ -37,7 +37,7 @@ a{
 	border-radius: 10%;
 	color: #CD0000;
 	background-color: transparent;
-	font-family: sans-serif;
+	font-family: Arial;
 }
 
 .btn-red3:hover{
@@ -54,7 +54,7 @@ a{
 	border-radius: 10%;
 	color: #1C1C1C;
 	background-color: transparent;
-	font-family: sans-serif;
+	font-family: Arial;
 }
 
 .btn-grey11:hover{
@@ -78,7 +78,7 @@ li{
 
 
 /*Caeçario*/
-.navbar{
+.cabecario{
 	width: 100%;
 	height: 60px;
 	margin-top: -8px;
@@ -87,7 +87,7 @@ li{
 	background: #E8E8E8;
 }
 
-.navbar-titulo{
+.titulo{
 	text-decoration: none;
 	margin: 15px 10px;
 	font-size: 23px;
@@ -95,7 +95,7 @@ li{
 	color: #1C1C1C;
 }
 
-.navbar .btn-purple4{
+.cabecario .btn-purple4{
 	font-size: 18px;
 	margin: 15px 10px 10px;
 }
